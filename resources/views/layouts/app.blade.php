@@ -34,6 +34,14 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
 
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('books.index') }}">{{ __('Libros') }}</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('categories.index') }}">{{ __('Categorias') }}</a>
+                        </li>
+                    
                     </ul>
 
                     <!-- Right Side Of Navbar -->
