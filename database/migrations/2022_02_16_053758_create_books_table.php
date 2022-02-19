@@ -17,15 +17,13 @@ class CreateBooksTable extends Migration
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
             $table->bigInteger('category_id')->unsigned();
-            $table->bigInteger('editorial_id')->unsigned();
+            $table->string('editorial');
             $table->string('name');
-            $table->bigInteger('author_id')->unsigned();
+            $table->string('author');
             $table->string('description');
             $table->string('image');
             $table->timestamps();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
-            $table->foreign('editorial_id')->references('id')->on('editorials')->onDelete('cascade');
-            $table->foreign('author_id')->references('id')->on('authors')->onDelete('cascade');
         });
     }
 
