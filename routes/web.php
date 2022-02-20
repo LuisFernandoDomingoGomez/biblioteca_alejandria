@@ -23,7 +23,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Auth::routes();
 
-Route::resource('books', App\Http\Controllers\BookController::class);
-Route::resource('categories', App\Http\Controllers\CategoryController::class);
+Route::resource('books', App\Http\Controllers\BookController::class)->middleware('auth');
+Route::resource('categories', App\Http\Controllers\CategoryController::class)->middleware('auth');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
