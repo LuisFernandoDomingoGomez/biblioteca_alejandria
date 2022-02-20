@@ -13,12 +13,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Book') }}
+                                {{ __('Libros') }}
                             </span>
 
                              <div class="float-right">
                                 <a href="{{ route('books.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Crear libro') }}
                                 </a>
                               </div>
                         </div>
@@ -36,12 +36,12 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Category Id</th>
+										<th>Categoria</th>
 										<th>Editorial</th>
-										<th>Name</th>
-										<th>Author</th>
-										<th>Description</th>
-										<th>Image</th>
+										<th>Nombre</th>
+										<th>Autor</th>
+										<th>Descripcion</th>
+										<th>Portada</th>
 										<th>Pdf</th>
 
                                         <th></th>
@@ -52,7 +52,12 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $book->category_id }}</td>
+											<td>
+
+                                                {{ $book->category->name }}
+                                            
+                                            </td>
+
 											<td>{{ $book->editorial }}</td>
 											<td>{{ $book->name }}</td>
 											<td>{{ $book->author }}</td>

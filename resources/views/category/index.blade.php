@@ -13,12 +13,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Category') }}
+                                {{ __('Categorias') }}
                             </span>
 
                              <div class="float-right">
                                 <a href="{{ route('categories.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Crear categoria') }}
                                 </a>
                               </div>
                         </div>
@@ -36,7 +36,7 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Name</th>
+										<th>Nombre</th>
 
                                         <th></th>
                                     </tr>
