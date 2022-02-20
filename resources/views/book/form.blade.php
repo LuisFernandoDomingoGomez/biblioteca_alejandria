@@ -3,9 +3,10 @@
         
         <div class="form-group">
             {{ Form::label('category_id') }}
-            {{ Form::text('category_id', $book->category_id, ['class' => 'form-control' . ($errors->has('category_id') ? ' is-invalid' : ''), 'placeholder' => 'Category Id']) }}
+            {{ Form::select('category_id', $categories, $book->category_id, ['class' => 'form-control' . ($errors->has('category_id') ? ' is-invalid' : ''), 'placeholder' => 'Category Id']) }}
             {!! $errors->first('category_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
+
         <div class="form-group">
             {{ Form::label('editorial') }}
             {{ Form::text('editorial', $book->editorial, ['class' => 'form-control' . ($errors->has('editorial') ? ' is-invalid' : ''), 'placeholder' => 'Editorial']) }}

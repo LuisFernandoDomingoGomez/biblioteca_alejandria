@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 /**
@@ -32,7 +33,8 @@ class BookController extends Controller
     public function create()
     {
         $book = new Book();
-        return view('book.create', compact('book'));
+        $categories= Category::pluck('name','id');
+        return view('book.create', compact('book','categories'));
     }
 
     /**
@@ -73,8 +75,9 @@ class BookController extends Controller
     public function edit($id)
     {
         $book = Book::find($id);
+        $categories= Category::pluck('name','id');
 
-        return view('book.edit', compact('book'));
+        return view('book.edit', compact('book','categories'));
     }
 
     /**
