@@ -5,16 +5,17 @@
 @endsection
 
 @section('content')
+    <br><br><br><br>
     <section class="content container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Visualizar Libro</span>
+                            <span class="card-title">Show Book</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('books.index') }}"> Regresar</a>
+                            <a class="btn btn-primary" href="{{ route('books.index') }}"> Back</a>
                         </div>
                     </div>
 
@@ -25,16 +26,16 @@
                             {{ $book->category_id }}
                         </div>
                         <div class="form-group">
-                            <strong>Editorial:</strong>
-                            {{ $book->editorial }}
+                            <strong>Editorial Id:</strong>
+                            {{ $book->editorial_id }}
                         </div>
                         <div class="form-group">
                             <strong>Name:</strong>
                             {{ $book->name }}
                         </div>
                         <div class="form-group">
-                            <strong>Author:</strong>
-                            {{ $book->author }}
+                            <strong>Author Id:</strong>
+                            {{ $book->author_id }}
                         </div>
                         <div class="form-group">
                             <strong>Description:</strong>

@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+    <br><br><br><br>
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
@@ -13,12 +14,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Categorias') }}
+                                {{ __('Category') }}
                             </span>
 
                              <div class="float-right">
                                 <a href="{{ route('categories.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Crear categoria') }}
+                                  {{ __('Create New') }}
                                 </a>
                               </div>
                         </div>
@@ -36,7 +37,7 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Nombre</th>
+										<th>Name</th>
 
                                         <th></th>
                                     </tr>

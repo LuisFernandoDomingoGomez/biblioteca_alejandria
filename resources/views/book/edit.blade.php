@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+    <br><br><br><br>
     <section class="content container-fluid">
         <div class="">
             <div class="col-md-12">
@@ -13,7 +14,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Modificar Libro</span>
+                        <span class="card-title">Update Book</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('books.update', $book->id) }}"  role="form" enctype="multipart/form-data">

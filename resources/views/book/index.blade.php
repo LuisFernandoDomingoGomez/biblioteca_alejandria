@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+    <br><br><br><br>
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
@@ -13,12 +14,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Libros') }}
+                                {{ __('Book') }}
                             </span>
 
                              <div class="float-right">
                                 <a href="{{ route('books.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Crear libro') }}
+                                  {{ __('Create New') }}
                                 </a>
                               </div>
                         </div>
@@ -36,12 +37,12 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Categoria</th>
-										<th>Editorial</th>
-										<th>Nombre</th>
-										<th>Autor</th>
-										<th>Descripcion</th>
-										<th>Portada</th>
+										<th>Category Id</th>
+										<th>Editorial Id</th>
+										<th>Name</th>
+										<th>Author Id</th>
+										<th>Description</th>
+										<th>Image</th>
 										<th>Pdf</th>
 
                                         <th></th>
@@ -52,15 +53,10 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>
-
-                                                {{ $book->category->name }}
-                                            
-                                            </td>
-
-											<td>{{ $book->editorial }}</td>
+											<td>{{ $book->category_id }}</td>
+											<td>{{ $book->editorial_id }}</td>
 											<td>{{ $book->name }}</td>
-											<td>{{ $book->author }}</td>
+											<td>{{ $book->author_id }}</td>
 											<td>{{ $book->description }}</td>
 											<td>{{ $book->image }}</td>
 											<td>{{ $book->pdf }}</td>
