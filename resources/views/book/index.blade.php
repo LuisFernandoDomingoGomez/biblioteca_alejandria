@@ -41,9 +41,8 @@
 										<th>Editorial</th>
 										<th>Nombre</th>
 										<th>Autor</th>
-										<th>Descripcion</th>
 										<th>Portada</th>
-										<th>Pdf</th>
+                                        <th>Acciones</th>
 
                                         <th></th>
                                     </tr>
@@ -57,9 +56,7 @@
 											<td>{{ $book->editorial->name }}</td>
 											<td>{{ $book->name }}</td>
 											<td>{{ $book->author->name }}</td>
-											<td>{{ $book->description }}</td>
-											<td>{{ $book->image }}</td>
-											<td>{{ $book->pdf }}</td>
+											<td><img src="{{asset('imagenes/' . $book->image)}}" width="40px"></td>
 
                                             <td>
                                                 <form action="{{ route('books.destroy',$book->id) }}" method="POST">

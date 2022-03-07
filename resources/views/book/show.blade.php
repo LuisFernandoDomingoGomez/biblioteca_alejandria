@@ -19,37 +19,42 @@
                         </div>
                     </div>
 
-                    <div class="card-body">
-                        
-                        <div class="form-group">
-                            <strong>Categoria:</strong>
-                            {{ $book->category_id }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Editorial:</strong>
-                            {{ $book->editorial_id }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Nombre:</strong>
-                            {{ $book->name }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Autor:</strong>
-                            {{ $book->author_id }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Descripcion:</strong>
-                            {{ $book->description }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Portada:</strong>
-                            {{ $book->image }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Pdf:</strong>
-                            {{ $book->pdf }}
+                    <div class="row g-0">
+                        <div class="col-md-3">
+                            <img src="{{asset('imagenes/' . $book->image)}}"
+                            height= '200px'
+                            width= '255px'
+                            class="img-fluid rounded-start" alt="...">
                         </div>
 
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <strong>Categoria:</strong>
+                                    {{ $book->category->name }}
+                                </div>
+                                <div class="form-group">
+                                    <strong>Editorial:</strong>
+                                    {{ $book->editorial->name }}
+                                </div>
+                                <div class="form-group">
+                                    <strong>Nombre:</strong>
+                                    {{ $book->name }}
+                                </div>
+                                <div class="form-group">
+                                    <strong>Autor:</strong>
+                                    {{ $book->author->name }}
+                                </div>
+                                <div class="form-group">
+                                    <strong>Descripcion:</strong>
+                                    {{ $book->description }}
+                                </div>
+                                <div class="form-group">
+                                    <strong>Pdf:</strong>
+                                    {{ $book->pdf }}
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
