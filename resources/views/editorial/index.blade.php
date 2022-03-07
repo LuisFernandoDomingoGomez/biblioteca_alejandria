@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Editorial
+    Editoriales
 @endsection
 
 @section('content')
@@ -14,12 +14,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Editorial') }}
+                                {{ __('Editoriales') }}
                             </span>
 
                              <div class="float-right">
                                 <a href="{{ route('editorials.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Crear Nueva') }}
                                 </a>
                               </div>
                         </div>
@@ -37,7 +37,7 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Name</th>
+										<th>Nombre</th>
 
                                         <th></th>
                                     </tr>

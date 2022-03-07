@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ $author->name ?? 'Show Author' }}
+    {{ $author->name ?? 'Mostrar Autor' }}
 @endsection
 
 @section('content')
@@ -12,17 +12,17 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Author</span>
+                            <span class="card-title">Mostrar Autor</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('authors.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('authors.index') }}"> Atrás</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Name:</strong>
+                            <strong>Nombre:</strong>
                             {{ $author->name }}
                         </div>
 

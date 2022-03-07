@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Update Author
+    Actualizar Autor
 @endsection
 
 @section('content')
@@ -14,7 +14,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Update Author</span>
+                        <span class="card-title">Actualizar Autor</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('authors.update', $author->id) }}"  role="form" enctype="multipart/form-data">

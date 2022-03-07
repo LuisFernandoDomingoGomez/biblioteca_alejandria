@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Update Category
+    Actualizar Categoria
 @endsection
 
 @section('content')
@@ -14,7 +14,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Update Category</span>
+                        <span class="card-title">Actualizar Categoria</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('categories.update', $category->id) }}"  role="form" enctype="multipart/form-data">

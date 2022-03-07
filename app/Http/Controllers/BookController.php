@@ -80,8 +80,11 @@ class BookController extends Controller
     public function edit($id)
     {
         $book = Book::find($id);
+        $category = Category::pluck('name','id');
+        $editorial = Editorial::pluck('name','id');
+        $author = Author::pluck('name','id');
 
-        return view('book.edit', compact('book'));
+        return view('book.edit', compact('book', 'category', 'editorial', 'author'));
     }
 
     /**

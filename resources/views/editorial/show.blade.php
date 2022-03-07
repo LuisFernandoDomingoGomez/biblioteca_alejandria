@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ $editorial->name ?? 'Show Editorial' }}
+    {{ $editorial->name ?? 'Mostrar Editorial' }}
 @endsection
 
 @section('content')
@@ -12,17 +12,17 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Editorial</span>
+                            <span class="card-title">Mostrar Editorial</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('editorials.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('editorials.index') }}"> Atrás</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Name:</strong>
+                            <strong>Nombre:</strong>
                             {{ $editorial->name }}
                         </div>
 

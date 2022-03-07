@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Book
+    Libros
 @endsection
 
 @section('content')
@@ -14,12 +14,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Book') }}
+                                {{ __('Libros') }}
                             </span>
 
                              <div class="float-right">
                                 <a href="{{ route('books.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Crear Nuevo') }}
                                 </a>
                               </div>
                         </div>
@@ -37,12 +37,12 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Category Id</th>
-										<th>Editorial Id</th>
-										<th>Name</th>
-										<th>Author Id</th>
-										<th>Description</th>
-										<th>Image</th>
+										<th>Categoria</th>
+										<th>Editorial</th>
+										<th>Nombre</th>
+										<th>Autor</th>
+										<th>Descripcion</th>
+										<th>Portada</th>
 										<th>Pdf</th>
 
                                         <th></th>
@@ -53,10 +53,10 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $book->category_id }}</td>
-											<td>{{ $book->editorial_id }}</td>
+											<td>{{ $book->category->name }}</td>
+											<td>{{ $book->editorial->name }}</td>
 											<td>{{ $book->name }}</td>
-											<td>{{ $book->author_id }}</td>
+											<td>{{ $book->author->name }}</td>
 											<td>{{ $book->description }}</td>
 											<td>{{ $book->image }}</td>
 											<td>{{ $book->pdf }}</td>

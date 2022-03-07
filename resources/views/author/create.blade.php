@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Create Author
+    Crear Autor
 @endsection
 
 @section('content')
@@ -14,7 +14,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Create Author</span>
+                        <span class="card-title">Crear Autor</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('authors.store') }}"  role="form" enctype="multipart/form-data">
