@@ -22,11 +22,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();
 
-Route::resource('books', App\Http\Controllers\BookController::class);
-Route::resource('categories', App\Http\Controllers\CategoryController::class);
-Route::resource('editorials', App\Http\Controllers\EditorialController::class);
-Route::resource('authors', App\Http\Controllers\AuthorController::class);
-
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 
 Route::group(['middleware' => 'auth'], function () {
@@ -38,5 +33,9 @@ Route::group(['middleware' => 'auth'], function () {
 	 Route::get('icons', function () {return view('pages.icons');})->name('icons'); 
 	 Route::get('table-list', function () {return view('pages.tables');})->name('table');
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
+	Route::resource('books', App\Http\Controllers\BookController::class);
+	Route::resource('categories', App\Http\Controllers\CategoryController::class);
+	Route::resource('editorials', App\Http\Controllers\EditorialController::class);
+	Route::resource('authors', App\Http\Controllers\AuthorController::class);
 });
 
