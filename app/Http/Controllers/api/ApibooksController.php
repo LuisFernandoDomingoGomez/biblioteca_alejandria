@@ -5,8 +5,9 @@ namespace App\Http\Controllers\api;
 use App\Http\Controllers\Controller;
 use App\Models\Book;
 use Illuminate\Http\Request;
+use App\Http\Controllers\ApiController;
 
-class ApibooksController extends Controller
+class ApibooksController extends ApiController
 {
     /**
      * Display a listing of the resource.

@@ -5,8 +5,9 @@ namespace App\Http\Controllers\api;
 use App\Http\Controllers\Controller;
 use App\Models\Editorial;
 use Illuminate\Http\Request;
+use App\Http\Controllers\ApiController;
 
-class ApieditorialsController extends Controller
+class ApieditorialsController extends ApiController
 {
     /**
      * Display a listing of the resource.
