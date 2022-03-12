@@ -67,6 +67,20 @@ class EditorialSeeder extends Seeder
         );
         DB::table("editorials")->insert(
             [
+                'name' => 'DIANA',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
+        DB::table("editorials")->insert(
+            [
+                'name' => 'RESERVOIR BOOKS',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
+        DB::table("editorials")->insert(
+            [
                 'name' => 'Ediciones el Naranjo',
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -102,7 +116,7 @@ class EditorialSeeder extends Seeder
         );
         DB::table("editorials")->insert(
             [
-                'name' => 'EEditorial Pax',
+                'name' => 'Editorial Pax',
                 'created_at' => now(),
                 'updated_at' => now(),
             ]
