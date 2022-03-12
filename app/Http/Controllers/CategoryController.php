@@ -18,7 +18,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::paginate();
+        $categories = Category::paginate(10);
 
         return view('category.index', compact('categories'))
             ->with('i', (request()->input('page', 1) - 1) * $categories->perPage());

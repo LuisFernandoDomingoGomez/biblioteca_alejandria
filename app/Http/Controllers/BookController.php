@@ -21,7 +21,7 @@ class BookController extends Controller
      */
     public function index()
     {
-        $books = Book::paginate();
+        $books = Book::paginate(10);
 
         return view('book.index', compact('books'))
             ->with('i', (request()->input('page', 1) - 1) * $books->perPage());

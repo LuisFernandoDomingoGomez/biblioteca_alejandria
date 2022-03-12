@@ -18,7 +18,7 @@ class EditorialController extends Controller
      */
     public function index()
     {
-        $editorials = Editorial::paginate();
+        $editorials = Editorial::paginate(10);
 
         return view('editorial.index', compact('editorials'))
             ->with('i', (request()->input('page', 1) - 1) * $editorials->perPage());
