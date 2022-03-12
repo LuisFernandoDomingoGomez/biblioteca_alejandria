@@ -48,7 +48,7 @@ class AuthorController extends Controller
         $author = Author::create($request->all());
 
         return redirect()->route('authors.index')
-            ->with('success', 'Author created successfully.');
+            ->with('success', 'Autor creado con éxito.');
     }
 
     /**
@@ -91,7 +91,7 @@ class AuthorController extends Controller
         $author->update($request->all());
 
         return redirect()->route('authors.index')
-            ->with('success', 'Author updated successfully');
+            ->with('success', 'Autor actualizado correctamente');
     }
 
     /**
@@ -104,6 +104,6 @@ class AuthorController extends Controller
         $author = Author::find($id)->delete();
 
         return redirect()->route('authors.index')
-            ->with('success', 'Author deleted successfully');
+            ->with('success', 'Autor eliminado con éxito');
     }
 }

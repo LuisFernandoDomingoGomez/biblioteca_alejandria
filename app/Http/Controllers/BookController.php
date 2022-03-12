@@ -55,7 +55,7 @@ class BookController extends Controller
         $book = Book::create($request->all());
 
         return redirect()->route('books.index')
-            ->with('success', 'Book created successfully.');
+            ->with('success', 'Libro creado con éxito.');
     }
 
     /**
@@ -101,7 +101,7 @@ class BookController extends Controller
         $book->update($request->all());
 
         return redirect()->route('books.index')
-            ->with('success', 'Book updated successfully');
+            ->with('success', 'Libro actualizado correctamente');
     }
 
     /**
@@ -114,6 +114,6 @@ class BookController extends Controller
         $book = Book::find($id)->delete();
 
         return redirect()->route('books.index')
-            ->with('success', 'Book deleted successfully');
+            ->with('success', 'Libro eliminado con éxito');
     }
 }

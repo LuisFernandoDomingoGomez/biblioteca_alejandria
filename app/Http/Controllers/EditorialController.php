@@ -48,7 +48,7 @@ class EditorialController extends Controller
         $editorial = Editorial::create($request->all());
 
         return redirect()->route('editorials.index')
-            ->with('success', 'Editorial created successfully.');
+            ->with('success', 'Editorial creada con éxito.');
     }
 
     /**
@@ -91,7 +91,7 @@ class EditorialController extends Controller
         $editorial->update($request->all());
 
         return redirect()->route('editorials.index')
-            ->with('success', 'Editorial updated successfully');
+            ->with('success', 'Editorial actualizada correctamente');
     }
 
     /**
@@ -104,6 +104,6 @@ class EditorialController extends Controller
         $editorial = Editorial::find($id)->delete();
 
         return redirect()->route('editorials.index')
-            ->with('success', 'Editorial deleted successfully');
+            ->with('success', 'Editorial eliminada con éxito');
     }
 }
