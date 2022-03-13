@@ -116,6 +116,20 @@ class EditorialSeeder extends Seeder
         );
         DB::table("editorials")->insert(
             [
+                'name' => 'Editorial Sudamericana',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
+        DB::table("editorials")->insert(
+            [
+                'name' => 'Editorial Patria',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
+        DB::table("editorials")->insert(
+            [
                 'name' => 'Editorial Pax',
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -159,6 +173,27 @@ class EditorialSeeder extends Seeder
         DB::table("editorials")->insert(
             [
                 'name' => 'Tumbona Ediciones',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
+        DB::table("editorials")->insert(
+            [
+                'name' => 'Austral',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
+        DB::table("editorials")->insert(
+            [
+                'name' => 'Ediciones Urano',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
+        DB::table("editorials")->insert(
+            [
+                'name' => 'Hetzel',
                 'created_at' => now(),
                 'updated_at' => now(),
             ]

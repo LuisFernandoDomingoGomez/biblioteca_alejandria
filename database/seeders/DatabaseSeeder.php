@@ -4,6 +4,7 @@ namespace Database\Seeders;
 use App\Models\Category;
 use App\Models\Editorial;
 use App\Models\Author;
+use App\Models\Book;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
 
@@ -21,6 +22,7 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             EditorialSeeder::class,
             AuthorSeeder::class,
+            BookSeeder::class,
         ]);
     }
 }

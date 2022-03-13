@@ -53,6 +53,13 @@ class AuthorSeeder extends Seeder
         );
         DB::table("authors")->insert(
             [
+                'name' => 'Aurelio Baldor',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
+        DB::table("authors")->insert(
+            [
                 'name' => 'Virginia Wolf',
                 'created_at' => now(),
                 'updated_at' => now(),
