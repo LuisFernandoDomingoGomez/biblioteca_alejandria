@@ -95,12 +95,38 @@ class BookSeeder extends Seeder
         );
         DB::table("books")->insert(
             array(
+                "category_id" => 27,
+                "editorial_id" => 1,
+                "name" => "Orgullo y prejuicio",
+                "author_id" => 24,
+                "description" => "ss",
+                "image" => "orgullo_y_prejuicio.jpg",
+                "pdf" => "ss",
+                'created_at'=>now(),
+                'updated_at'=>now(),
+            )
+        );
+        DB::table("books")->insert(
+            array(
                 "category_id" => 36,
                 "editorial_id" => 26,
                 "name" => "La vuelta al mundo en 80 dias",
                 "author_id" => 27,
                 "description" => "ss",
                 "image" => "la_vuelta_al_mundo_en_80_dias.jpg",
+                "pdf" => "ss",
+                'created_at'=>now(),
+                'updated_at'=>now(),
+            )
+        );
+        DB::table("books")->insert(
+            array(
+                "category_id" => 29,
+                "editorial_id" => 15,
+                "name" => "Cien años de soledad",
+                "author_id" => 1,
+                "description" => "ss",
+                "image" => "cien_anos_de_soledad.jpg",
                 "pdf" => "ss",
                 'created_at'=>now(),
                 'updated_at'=>now(),

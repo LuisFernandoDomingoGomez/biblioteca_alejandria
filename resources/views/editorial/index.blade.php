@@ -39,6 +39,8 @@
                                         
 										<th>Nombre</th>
 
+                                        <th>Acciones</th>
+
                                         <th></th>
                                     </tr>
                                 </thead>
