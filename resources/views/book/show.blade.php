@@ -49,9 +49,10 @@
                                     <strong>Descripcion:</strong>
                                     {{ $book->description }}
                                 </div>
-                                <div class="form-group">
-                                    <strong>Pdf:</strong>
-                                    {{ $book->pdf }}
+                                <div class="d-grid gap-2">
+                                    <a href={{ $book->pdf }}>
+                                        <button type="button" class="btn btn-secondary btn-lg">Leer</button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
