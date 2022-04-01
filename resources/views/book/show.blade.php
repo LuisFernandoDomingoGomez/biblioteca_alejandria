@@ -21,7 +21,7 @@
 
                     <div class="row g-0">
                         <div class="col-md-3">
-                            <img src="{{asset('imagenes/' . $book->image)}}"
+                            <img src="{{asset($book->image)}}"
                             height= '200px'
                             width= '255px'
                             class="img-fluid rounded-start" alt="...">
@@ -50,7 +50,7 @@
                                     {{ $book->description }}
                                 </div>
                                 <div class="d-grid gap-2">
-                                    <a href={{ $book->pdf }}>
+                                    <a href="{{asset('archivos/' . $book->pdf)}}">
                                         <button type="button" class="btn btn-secondary btn-lg">Leer</button>
                                     </a>
                                 </div>
