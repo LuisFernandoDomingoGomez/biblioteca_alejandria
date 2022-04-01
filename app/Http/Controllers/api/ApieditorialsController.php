@@ -10,13 +10,15 @@ use App\Http\Controllers\ApiController;
 class ApieditorialsController extends ApiController
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the resource.rc
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return Editorial::all();
+        $editorials = Editorial::all();
+
+        return $this->showAll($editorials, 200);
     }
 
     /**
@@ -27,7 +29,9 @@ class ApieditorialsController extends ApiController
      */
     public function store(Request $request)
     {
-        return Editorial::create($request->all());
+        $editorials = Editorial::create($request->all());
+
+        return $this->showOne($editorials, 201);
     }
 
     /**
@@ -38,7 +42,14 @@ class ApieditorialsController extends ApiController
      */
     public function show($id)
     {
-        return Editorial::find($id);
+        try{
+            $editorials = Editorial::findOrfail($id);
+
+            return $this->showOne($editorials, 200);
+
+        } catch (\Throwable $th) {
+            return $this->errorResponse($th->getMessage(), 404);
+        }
     }
 
     /**
@@ -50,7 +61,10 @@ class ApieditorialsController extends ApiController
      */
     public function update(Request $request, $id)
     {
-        return Editorial::find($id)->update($request->all());
+        $id= Editorial::find($id);
+        $id->update($request->all());
+        //return $id;
+        return $this->showUpdate('Editorial actualizada correctamente');
     }
 
     /**
@@ -61,6 +75,15 @@ class ApieditorialsController extends ApiController
      */
     public function destroy($id)
     {
-        return Editorial::destroy($id);
+        try{
+            $editorials = Editorial::findOrfail($id);
+
+            $editorials->delete();
+
+            return $this->successResponse($editorials, 200);
+
+        } catch (\Throwable $th) {
+            return $this->errorResponse($th->getMessage(), 404);
+        }
     }
 }

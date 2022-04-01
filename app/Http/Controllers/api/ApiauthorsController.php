@@ -10,13 +10,15 @@ use App\Http\Controllers\ApiController;
 class ApiauthorsController extends ApiController
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the resource.rc
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return Author::all();
+        $authors = Author::all();
+
+        return $this->showAll($authors, 200);
     }
 
     /**
@@ -27,7 +29,9 @@ class ApiauthorsController extends ApiController
      */
     public function store(Request $request)
     {
-        return Author::create($request->all());
+        $authors = Author::create($request->all());
+
+        return $this->showOne($authors, 201);
     }
 
     /**
@@ -38,9 +42,15 @@ class ApiauthorsController extends ApiController
      */
     public function show($id)
     {
-        return Author::find($id);
-    }
+        try{
+            $authors = Author::findOrfail($id);
 
+            return $this->showOne($authors, 200);
+
+        } catch (\Throwable $th) {
+            return $this->errorResponse($th->getMessage(), 404);
+        }
+    }
 
     /**
      * Update the specified resource in storage.
@@ -51,7 +61,10 @@ class ApiauthorsController extends ApiController
      */
     public function update(Request $request, $id)
     {
-        return Author::find($id)->update($request->all());
+        $id= Author::find($id);
+        $id->update($request->all());
+        //return $id;
+        return $this->showUpdate('Autor actualizado correctamente');
     }
 
     /**
@@ -62,6 +75,15 @@ class ApiauthorsController extends ApiController
      */
     public function destroy($id)
     {
-        return Author::destroy($id);
+        try{
+            $authors = Author::findOrfail($id);
+
+            $authors->delete();
+
+            return $this->successResponse($authors, 200);
+
+        } catch (\Throwable $th) {
+            return $this->errorResponse($th->getMessage(), 404);
+        }
     }
 }

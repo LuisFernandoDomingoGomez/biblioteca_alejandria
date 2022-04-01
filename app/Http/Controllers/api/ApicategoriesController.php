@@ -10,13 +10,15 @@ use App\Http\Controllers\ApiController;
 class ApicategoriesController extends ApiController
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the resource.rc
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return Category::all();
+        $categories = Category::all();
+
+        return $this->showAll($categories, 200);
     }
 
     /**
@@ -27,7 +29,9 @@ class ApicategoriesController extends ApiController
      */
     public function store(Request $request)
     {
-        return Category::create($request->all());
+        $categories = Category::create($request->all());
+
+        return $this->showOne($categories, 201);
     }
 
     /**
@@ -38,7 +42,14 @@ class ApicategoriesController extends ApiController
      */
     public function show($id)
     {
-        return Category::find($id);
+        try{
+            $categories = Category::findOrfail($id);
+
+            return $this->showOne($categories, 200);
+
+        } catch (\Throwable $th) {
+            return $this->errorResponse($th->getMessage(), 404);
+        }
     }
 
     /**
@@ -50,7 +61,10 @@ class ApicategoriesController extends ApiController
      */
     public function update(Request $request, $id)
     {
-        return Category::find($id)->update($request->all());
+        $id= Category::find($id);
+        $id->update($request->all());
+        //return $id;
+        return $this->showUpdate('Categoria actualizada correctamente');
     }
 
     /**
@@ -61,6 +75,15 @@ class ApicategoriesController extends ApiController
      */
     public function destroy($id)
     {
-        return Category::destroy($id);
+        try{
+            $categories = Category::findOrfail($id);
+
+            $categories->delete();
+
+            return $this->successResponse('Categoria eliminada correctamente');
+
+        } catch (\Throwable $th) {
+            return $this->errorResponse($th->getMessage(), 404);
+        }
     }
 }
