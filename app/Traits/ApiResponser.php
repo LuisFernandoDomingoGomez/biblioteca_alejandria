@@ -21,13 +21,20 @@ trait apiResponser
     
     /** Mostrara la lista completas de usuarios  si la respuesta
      * no tiene un codigo por defecto mandamos un 200*/
-    protected function showAll(Collection $collection, $code = 200){
+    protected function showAll(Collection $collection, $code = 200)
+    {
         return $this->successResponse(['data'=> $collection], $code);
     }
 
+    /* Mensaje de actualizar desde la api */
+    protected function showUpdate($message, $code = 200){
+        return $this->successResponse(['data'=> $message], $code);
+    }
+
     /** Mostrara solo un registro y este resive una instancia */
-    protected function showOne(Model $instance, $code = 200){
+    protected function showOne(Model $instance, $code = 200)
+    {
         return $this->successResponse(['data'=> $instance], $code);
-  }
+    }
 
 }

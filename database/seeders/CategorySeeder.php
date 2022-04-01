@@ -282,5 +282,12 @@ class CategorySeeder extends Seeder
                 'updated_at' => now(),
             ]
         );
+        DB::table("categories")->insert(
+            [
+                'name' => 'Epopeya',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
     }
 }

@@ -198,5 +198,19 @@ class EditorialSeeder extends Seeder
                 'updated_at' => now(),
             ]
         );
+        DB::table("editorials")->insert(
+            [
+                'name' => 'Era',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
+        DB::table("editorials")->insert(
+            [
+                'name' => 'Planeta',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
     }
 }

@@ -261,5 +261,19 @@ class AuthorSeeder extends Seeder
                 'updated_at' => now(),
             ]
         );
+        DB::table("authors")->insert(
+            [
+                'name' => 'Carlos Fuentes',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
+        DB::table("authors")->insert(
+            [
+                'name' => 'German Garmendia',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
     }
 }

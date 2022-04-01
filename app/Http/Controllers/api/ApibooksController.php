@@ -10,7 +10,7 @@ use App\Http\Controllers\ApiController;
 class ApibooksController extends ApiController
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the resource.rc
      *
      * @return \Illuminate\Http\Response
      */
@@ -27,7 +27,9 @@ class ApibooksController extends ApiController
      */
     public function store(Request $request)
     {
-        return Book::create($request->all());
+        $books = Book::create($request->all());
+
+        return $this->showOne($books, 201);
     }
 
     /**
@@ -38,7 +40,14 @@ class ApibooksController extends ApiController
      */
     public function show($id)
     {
-        return Book::find($id);
+        try{
+            $books = Book::findOrfail($id);
+
+            return $this->showOne($books, 200);
+
+        } catch (\Throwable $th) {
+            return $this->errorResponse($th->getMessage(), 404);
+        }
     }
 
     /**
@@ -50,7 +59,10 @@ class ApibooksController extends ApiController
      */
     public function update(Request $request, $id)
     {
-        return Book::find($id)->update($request->all());
+        $id= Book::find($id);
+        $id->update($request->all());
+        //return $id;
+        return $this->showUpdate('Libro actualizado correctamente');
     }
 
     /**
@@ -61,6 +73,15 @@ class ApibooksController extends ApiController
      */
     public function destroy($id)
     {
-        return Book::destroy($id);
+        try{
+            $books = Book::findOrfail($id);
+
+            $books->delete();
+
+            return $this->successResponse($books, 200);
+
+        } catch (\Throwable $th) {
+            return $this->errorResponse($th->getMessage(), 404);
+        }
     }
 }
