@@ -69,26 +69,13 @@ class BookSeeder extends Seeder
         );
         DB::table("books")->insert(
             array(
-                "category_id" => 2,
-                "editorial_id" => 16,
-                "name" => "Álgebra de Baldor",
-                "author_id" => 6,
-                "description" => "ss",
-                "image" => "https://images-na.ssl-images-amazon.com/images/I/515H0M674XL._SX600_.jpg",
-                "pdf" => "https://guao.org/sites/default/files/biblioteca/%C3%81lgebra%20de%20Baldor.pdf",
-                'created_at'=>now(),
-                'updated_at'=>now(),
-            )
-        );
-        DB::table("books")->insert(
-            array(
                 "category_id" => 11,
                 "editorial_id" => 24,
                 "name" => "El manifiesto comunista",
                 "author_id" => 31,
                 "description" => "ss",
                 "image" => "https://www.planetadelibros.com/usuaris/libros/fotos/285/m_libros/portada_el-manifiesto-comunista_karl-marx_201811061652.jpg",
-                "pdf" => "http://unidaddegenerosgg.edomex.gob.mx/sites/unidaddegenerosgg.edomex.gob.mx/files/files/biblioteca/8%20GE%CC%81NERO%2C%20SOCIEDAD%20Y%20JUSTICIA/El%20manifiesto%20comunista.pdf",
+                "pdf" => "https://centromarx.org/images/stories/PDF/manifiesto%20comunista.pdf",
                 'created_at'=>now(),
                 'updated_at'=>now(),
             )

@@ -19,8 +19,8 @@
                             <a class="btn btn-primary" href="{{ route('books.index') }}"> Atrás</a>
                         </div>
                     </div>
-                    <div class="d-grid gap-2">
-                        <center><iframe width="700" height="800" src="{{asset($book->pdf)}}#toolbar=0" frameborder="0"></iframe></center>
+                    <div class="content container-fluid">
+                        <center><iframe height="800" width="100%" src="{{asset($book->pdf)}}#toolbar=0" frameborder="0"></iframe></center>   
                     </div>
                 </div>
             </div>
