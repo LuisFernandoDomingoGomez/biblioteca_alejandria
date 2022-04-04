@@ -289,5 +289,33 @@ class CategorySeeder extends Seeder
                 'updated_at' => now(),
             ]
         );
+        DB::table("categories")->insert(
+            [
+                'name' => 'Novela psicológica',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
+        DB::table("categories")->insert(
+            [
+                'name' => 'Novela corta',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
+        DB::table("categories")->insert(
+            [
+                'name' => 'Suspenso',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
+        DB::table("categories")->insert(
+            [
+                'name' => 'Ficción deportiva',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
     }
 }

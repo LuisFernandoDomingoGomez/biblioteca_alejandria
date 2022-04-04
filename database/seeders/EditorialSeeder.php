@@ -212,5 +212,33 @@ class EditorialSeeder extends Seeder
                 'updated_at' => now(),
             ]
         );
+        DB::table("editorials")->insert(
+            [
+                'name' => 'Diario Educacion',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
+        DB::table("editorials")->insert(
+            [
+                'name' => 'Debolsillo',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
+        DB::table("editorials")->insert(
+            [
+                'name' => 'Budo',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
+        DB::table("editorials")->insert(
+            [
+                'name' => 'Empresa Activa',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
     }
 }

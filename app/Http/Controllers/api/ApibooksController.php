@@ -40,14 +40,7 @@ class ApibooksController extends ApiController
      */
     public function show($id)
     {
-        try{
-            $books = Book::findOrfail($id);
-
-            return $this->showOne($books, 200);
-
-        } catch (\Throwable $th) {
-            return $this->errorResponse($th->getMessage(), 404);
-        }
+        return Book::find($id);
     }
 
     /**

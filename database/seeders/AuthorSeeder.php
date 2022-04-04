@@ -275,5 +275,47 @@ class AuthorSeeder extends Seeder
                 'updated_at' => now(),
             ]
         );
+        DB::table("authors")->insert(
+            [
+                'name' => 'No aplica',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
+        DB::table("authors")->insert(
+            [
+                'name' => 'Laura V. González Guerrero',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
+        DB::table("authors")->insert(
+            [
+                'name' => 'Antoine de Saint-Exupéry',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
+        DB::table("authors")->insert(
+            [
+                'name' => 'Bruce Lee',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
+        DB::table("authors")->insert(
+            [
+                'name' => 'Mathias Malzieu',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
+        DB::table("authors")->insert(
+            [
+                'name' => 'Spencer Johnson',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
     }
 }
