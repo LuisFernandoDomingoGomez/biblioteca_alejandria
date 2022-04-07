@@ -30,4 +30,4 @@ Route::post('/logout', [AuthController::class, 'logout']);
 Route::post('/reset-password', [AuthController::class, 'resetPassword']);
 Route::get('/users', [AuthController::class, 'showAll']);
 Route::get('/users/{id}', [AuthController::class, 'showOne']);
-Route::put('/users/update/{id}', [AuthController::class, 'update']);
+Route::put('/usersupdate/{id}', [AuthController::class, 'update']);
