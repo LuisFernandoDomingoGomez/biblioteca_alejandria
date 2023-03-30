@@ -47,8 +47,10 @@ class EditorialController extends Controller
 
         $editorial = Editorial::create($request->all());
 
-        return redirect()->route('editorials.index')
-            ->with('success', 'Editorial creada con éxito.');
+        return response()->json([
+            'message' => 'Created Editorial', 
+            'editorials' => $editorial
+        ], 201);
     }
 
     /**
