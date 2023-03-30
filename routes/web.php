@@ -35,7 +35,10 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
 	Route::resource('books', App\Http\Controllers\BookController::class);
 	Route::resource('categories', App\Http\Controllers\CategoryController::class);
-	Route::resource('editorials', App\Http\Controllers\EditorialController::class);
 	Route::resource('authors', App\Http\Controllers\AuthorController::class);
 });
 
+
+Route::resource('category', App\Http\Controllers\CategoryController::class);
+Route::resource('author', App\Http\Controllers\AuthorController::class);
+Route::resource('editorials', App\Http\Controllers\EditorialController::class);

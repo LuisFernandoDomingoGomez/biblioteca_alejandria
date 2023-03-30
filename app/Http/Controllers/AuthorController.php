@@ -90,8 +90,10 @@ class AuthorController extends Controller
 
         $author->update($request->all());
 
-        return redirect()->route('authors.index')
-            ->with('success', 'Autor actualizado correctamente');
+        return response()->json([
+            'message' => 'Updated Author', 
+            'author' => $author
+        ], 301);
     }
 
     /**
