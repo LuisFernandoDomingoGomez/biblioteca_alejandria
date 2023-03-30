@@ -47,8 +47,10 @@ class CategoryController extends Controller
 
         $category = Category::create($request->all());
 
-        return redirect()->route('categories.index')
-            ->with('success', 'Categoria creada con éxito.');
+        return response()->json([
+            'message' => 'Created Category', 
+            'category' => $category
+        ], 201);
     }
 
     /**
